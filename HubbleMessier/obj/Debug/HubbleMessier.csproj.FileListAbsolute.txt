@@ -1,0 +1,12 @@
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\bin\Debug\HubbleMessier.exe.config
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\bin\Debug\HubbleMessier.exe
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\bin\Debug\HubbleMessier.pdb
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\bin\Debug\Telegram.Bot.dll
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\bin\Debug\Telegram.Bot.xml
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\obj\Debug\HubbleMessier.csprojAssemblyReference.cache
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\obj\Debug\HubbleMessier.csproj.CoreCompileInputs.cache
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\obj\Debug\HubbleMessier.csproj.CopyComplete
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\obj\Debug\HubbleMessier.exe
+C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\obj\Debug\HubbleMessier.pdb
