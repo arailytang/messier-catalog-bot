@@ -12,7 +12,7 @@ namespace HubbleMessier
 {
     class Program
     {
-        static TelegramBotClient Bot = new TelegramBotClient("[token]");
+        static TelegramBotClient Bot = new TelegramBotClient("[API token]");
         static string imagesPath = @"C:\Users\Arailym\source\repos\HubbleMessier\HubbleMessier\images\";
         
         static List<string> nebulas = new List<string>
