@@ -40,7 +40,13 @@ namespace HubbleMessier
 
         private static async void Bot_OnMessage(object sender, Telegram.Bot.Args.MessageEventArgs e)
         {
-            if(e.Message.Text.StartsWith("/image("))
+            if(e.Message.Text.StartsWith("help"))
+            {
+                await Bot.SendTextMessageAsync(e.Message.Chat.Id, "Hello, " + e.Message.Chat.Username);
+                await Bot.SendTextMessageAsync(e.Message.Chat.Id, "Send /image(type). Type can be either nebula, cluster or galaxy.");
+            }
+
+            if (e.Message.Text.StartsWith("/image("))
             {
                 var query = e.Message.Text.Split('(')[1].Split(')')[0];
 
@@ -71,7 +77,7 @@ namespace HubbleMessier
                     }
                 }
 
-                if (query == "nebulas")
+                /*if (query == "nebulas")
                 {
                     List<FileStream> streams = new List<FileStream>
                     {
@@ -91,6 +97,38 @@ namespace HubbleMessier
                     foreach(var stream in streams)
                     {
                         stream.Close();
+                    }
+                }*/
+
+                Random rand = new Random();
+
+                if (query == "nebula")
+                {
+                    int nebulaR = rand.Next(nebulas.Count);
+                    using (var stream = System.IO.File.OpenRead(imagesPath + nebulas[nebulaR]))
+                    {
+                        InputOnlineFile inputOnlineFile = new InputOnlineFile(stream);
+                        await Bot.SendPhotoAsync(e.Message.Chat.Id, inputOnlineFile, "<i>Random nebula image</i>", Telegram.Bot.Types.Enums.ParseMode.Html);
+                    }
+                }
+
+                if (query == "cluster")
+                {
+                    int clusterR = rand.Next(clusters.Count);
+                    using (var stream = System.IO.File.OpenRead(imagesPath + clusters[clusterR]))
+                    {
+                        InputOnlineFile inputOnlineFile = new InputOnlineFile(stream);
+                        await Bot.SendPhotoAsync(e.Message.Chat.Id, inputOnlineFile, "<i>Random cluster image</i>", Telegram.Bot.Types.Enums.ParseMode.Html);
+                    }
+                }
+
+                if (query == "galaxy")
+                {
+                    int galaxyR = rand.Next(galaxies.Count);
+                    using (var stream = System.IO.File.OpenRead(imagesPath + galaxies[galaxyR]))
+                    {
+                        InputOnlineFile inputOnlineFile = new InputOnlineFile(stream);
+                        await Bot.SendPhotoAsync(e.Message.Chat.Id, inputOnlineFile, "<i>Random cluster image</i>", Telegram.Bot.Types.Enums.ParseMode.Html);
                     }
                 }
             }
